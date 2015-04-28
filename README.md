@@ -15,7 +15,18 @@ pollutantmean.R
 pollutantmean.R uses the data specdata.zip and assumes that the file has been unzipped into the working directory.  It is a function that calculates the mean of a pollutant (sulfate or nitrate) across a specified list of monitors, ignoring any missing values coded as NA.
 
 The function contains the following features:
-- Accepts only 'sulfate' and 'nitrate' as possible pollutant names.
+- Returns the mean for all monitors as a default 
+- Accepts only 'sulfate' and 'nitrate' as possible pollutant names
 - Not case-sensitive
 - Eliminates duplicate ID values
 - Ignores invalid ID values, but calculates mean for remaining values, if any
+
+complete.R
+-------------
+
+complete.R uses the data specdata.zip and assumes that the file has been unzipped into the working directory.  It is a function that returns a data frame that reports the number of completely observed cases (i.e. the number of dates for which both 'sulfate' and 'nitrate' have recorded readings) for each monitor ID number specified.
+
+The function contains the following features:
+- Returns the results for all monitors as a default 
+- Eliminates duplicate ID values
+- Ignores invalid ID values, but returns results for remaining values, if any
